@@ -1,7 +1,7 @@
 package eryder;
 
 public class ERyder {
-    private static final String COMPANY_NAME="ERyder";
+    /*private static final String COMPANY_NAME="ERyder";
     private static final double BASE_FARE=1.0;
     private static final double PER_MINUTE_FARE=0.5;
 
@@ -9,40 +9,26 @@ public class ERyder {
     private final long LINKED_PHONE_NUMBER;
 
     private int totalUsageInMinutes;
-    private double totalFare;
+    private double totalFare;*/
 
     private String bikeID;
     private int batteryLevel;
     public boolean isAvailable;
     public float kmDriven;
 
-    public ERyder(String bikeID,int batteryLevel,boolean isAvailable,float kmDriven,String linkedAccount,long linkedPhoneNumber){
+    public ERyder(String bikeID,int batteryLevel,boolean isAvailable,float kmDriven){
         this.bikeID=bikeID;
         setBatteryLevel(batteryLevel);
         this.isAvailable=isAvailable;
         this.kmDriven=kmDriven;
 
-        this.totalUsageInMinutes=0;
-        this.totalFare=0.0;
-
-        LINKED_ACCOUNT=linkedAccount;
-        LINKED_PHONE_NUMBER=linkedPhoneNumber;
+        
     }
-    public ERyder(String bikeID,int batteryLevel,boolean isAvailable,float kmDriven){
-        /*bikeID="No ID";
+    public ERyder(){
+        bikeID="No ID";
         batteryLevel=0;
         isAvailable=false;
-        kmDriven=0.0f;*/
-        this.totalUsageInMinutes=0;
-        this.totalFare=0.0;
-
-        this.bikeID=bikeID;
-        setBatteryLevel(batteryLevel);
-        this.isAvailable=isAvailable;
-        this.kmDriven=kmDriven;
-
-        LINKED_ACCOUNT="Alice";
-        LINKED_PHONE_NUMBER=987654321L;
+        kmDriven=0.0f;
     }
     public void setBikeID(String bikeID){
         this.bikeID=bikeID;
@@ -73,25 +59,6 @@ public class ERyder {
     public float getKmDriven(){
         return kmDriven;
     }
-    public void setTotalUsageInMinutes(int totalUsageInMinutes){
-        this.totalUsageInMinutes=totalUsageInMinutes;
-    }
-    public int getTotalUsageInMinutes(){
-        return totalUsageInMinutes;
-    }
-    public void setTotalFare(double totalFare){
-        this.totalFare=totalFare;
-    }
-    public double getTotalFare(){
-        return totalFare;
-    }
-    public String getLINKED_ACCOUNT(){
-        return LINKED_ACCOUNT;
-    }
-    public long getLINKED_PHONE_NUMBER(){
-        return LINKED_PHONE_NUMBER;
-    }
-
     public void ride(){
         if(batteryLevel>0 && isAvailable==true){
             System.out.println("The bike is available!");
@@ -106,7 +73,7 @@ public class ERyder {
         System.out.println("isAvailable:"+isAvailable);
         System.out.println("kmDriven:"+kmDriven+"km");
     }
-    public void printRideDetails(int usageInMinutes){
+    /*public void printRideDetails(int usageInMinutes){
         totalUsageInMinutes = usageInMinutes;
         System.out.println("bike company name:"+COMPANY_NAME);
         System.out.println("linked account:"+LINKED_ACCOUNT);
@@ -121,6 +88,6 @@ public class ERyder {
     }
     public double useCalculateFare(int usageInMinutes){
         return calculateFare(usageInMinutes);
-    }
+    }*/
 }
 
